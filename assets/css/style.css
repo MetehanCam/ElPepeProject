@@ -1304,6 +1304,17 @@ section {
       .col-lg-4 {
           width: calc(80% - 220px);
       }
+      #btnCopyBoard{
+        font-size: 9px;
+      }
+      #pepeImg{
+        width: 140%;
+        max-width: 140%;
+      }
+      #dogeImg{
+        width: 140%;
+        max-width: 140%;
+      }
       .progress-bar {
         width: 140px;
         height: 25px;
