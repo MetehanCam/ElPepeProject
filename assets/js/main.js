@@ -302,24 +302,32 @@ function scrollFunction() {
 
 
 window.onload = function() {
-  // Make HTTP GET request to the API endpoint
-  fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=BQCm6uLUuu8C3RQtivW8wRFf3AdkdRzdD2WvDEmHvqVG', {
-      method: 'GET',
-      headers: {
-          'Accept': 'application/json',
-          'x-api-key': 'ysDcfa2xiWWL0j_L'
-      }
-  })
-  .then(response => response.json())
-  .then(data => {
-      // Extract the balance from the response
-      const balance = data.result.balance;
+    // Make HTTP GET request to the API endpoint
+    fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=BQCm6uLUuu8C3RQtivW8wRFf3AdkdRzdD2WvDEmHvqVG', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'x-api-key': 'ysDcfa2xiWWL0j_L'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Extract the balance from the response
+        const balance = data.result.balance;
+        const total = 50; // assuming the total balance is 50 SOL
 
-      // Update the HTML to display the balance
-      document.getElementById('balance').textContent = 'Balance: ' + balance;
-  })
-  .catch(error => {
-      console.error('Error fetching balance:', error);
-      document.getElementById('balance').textContent = 'Error fetching balance';
-  });
-};
+        // Calculate the percentage
+        const percentage = (balance / total) * 100;
+
+        // Update the progress bar width
+        const progressBar = document.getElementById('progress');
+        progressBar.style.width = percentage + '%';
+
+        // Update the balance text
+        document.getElementById('balance').textContent = balance + ' / ' + total + ' SOL';
+    })
+    .catch(error => {
+        console.error('Error fetching balance:', error);
+        document.getElementById('balance').textContent = 'Error fetching balance';
+    });
+}
