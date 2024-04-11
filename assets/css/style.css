@@ -1240,8 +1240,3 @@ section {
       opacity: 1;
   }
 }
-
-.same-size-img {
-  width: 100%; /* or specify a fixed width */
-  height: auto; /* maintain aspect ratio */
-}

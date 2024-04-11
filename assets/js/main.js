@@ -301,35 +301,25 @@ function scrollFunction() {
 }
 
 
-$(document).ready(function(){
-  var iframeURL = "https://solscan.io/account/BQCm6uLUuu8C3RQtivW8wRFf3AdkdRzdD2WvDEmHvqVG";
-  
-  // İframe içeriğini almak için bir <iframe> oluştur
-  var iframe = $('<iframe>', {
-      src: iframeURL,
-      id: 'contentFrame',
-      frameborder: 0,
-      scrolling: 'auto',
-      width: '100%',
-      height: '100%'
-  });
-  
-  // İframe yüklenince çalışacak fonksiyon
-  iframe.on('load', function() {
-      // İframe içeriğine erişim
-      var iframeContent = iframe.contents();
-      
-      // İstenen div'in içeriğini al
-// İstenen div'in içeriğini al
-// İstenen div'in içeriğini al
-var targetContent = iframeContent.find('div:contains("SOL")').html();
+window.onload = function() {
+  // Make HTTP GET request to the API endpoint
+  fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=BQCm6uLUuu8C3RQtivW8wRFf3AdkdRzdD2WvDEmHvqVG', {
+      method: 'GET',
+      headers: {
+          'Accept': 'application/json',
+          'x-api-key': 'ysDcfa2xiWWL0j_L'
+      }
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Extract the balance from the response
+      const balance = data.result.balance;
 
-
-      
-      // Alınan içeriği sayfaya yerleştir
-      $('#target-div').html(targetContent);
+      // Update the HTML to display the balance
+      document.getElementById('balance').textContent = 'Balance: ' + balance;
+  })
+  .catch(error => {
+      console.error('Error fetching balance:', error);
+      document.getElementById('balance').textContent = 'Error fetching balance';
   });
-  
-  // İframe'i sayfaya ekle
-  $('#iframe-container').append(iframe);
-});
+};
