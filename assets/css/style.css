@@ -1302,7 +1302,8 @@ section {
     /* Telefonlar için medya sorgusu */
     @media screen and (max-width: 767px) {
       .col-lg-4 {
-          width: calc(80% - 220px);
+          width: calc(87% - 220px);
+          padding: 0;
       }
       #btnCopyBoard{
         font-size: 9px;
