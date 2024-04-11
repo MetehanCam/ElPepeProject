@@ -272,7 +272,7 @@
 })()
 
 function copyToClipboard() {
-  const textToCopy = "BDVHCB7w23GkVeM5zueBPrzSiYRL6Q2VjFVL9hXfW4qS";
+  const textToCopy = "7sWRfJBHXWDeugHwc7H5p1R2egK9P5fwChpPdjRkE3pn";
   
   navigator.clipboard.writeText(textToCopy)
   .then(() => {
@@ -290,7 +290,7 @@ function copyToClipboard() {
 }
 
 function copyToClipboardDoge() {
-  const textToCopy = "D5SF1gEukrYeHdJzMqF4DcbtDDPMayCAUrSFEnWVf2Qu";
+  const textToCopy = "8dihYasGvEMW6YeQiriWhkVgyJHZRFsRPCkoisd4xzQg";
   
   navigator.clipboard.writeText(textToCopy)
   .then(() => {
@@ -320,7 +320,7 @@ function scrollFunction() {
 
 window.onload = function() {
   // Make HTTP GET request to the first API endpoint
-  fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=BQCm6uLUuu8C3RQtivW8wRFf3AdkdRzdD2WvDEmHvqVG', {
+  fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=7sWRfJBHXWDeugHwc7H5p1R2egK9P5fwChpPdjRkE3pn', {
       method: 'GET',
       headers: {
           'Accept': 'application/json',
@@ -349,7 +349,7 @@ window.onload = function() {
   });
 
   // Make HTTP GET request to the second API endpoint
-  fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=D5SF1gEukrYeHdJzMqF4DcbtDDPMayCAUrSFEnWVf2Qu', {
+  fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=8dihYasGvEMW6YeQiriWhkVgyJHZRFsRPCkoisd4xzQg', {
       method: 'GET',
       headers: {
           'Accept': 'application/json',
