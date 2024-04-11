@@ -289,6 +289,23 @@ function copyToClipboard() {
   });
 }
 
+function copyToClipboardDoge() {
+  const textToCopy = "D5SF1gEukrYeHdJzMqF4DcbtDDPMayCAUrSFEnWVf2Qu";
+  
+  navigator.clipboard.writeText(textToCopy)
+  .then(() => {
+      Toastify({
+          text: "Copied the text: " + textToCopy,
+          duration: 3000,
+          gravity: "bottom", // bottom or top
+          position: "center", // center, left or right
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      }).showToast();
+  })
+  .catch(err => {
+      console.error('Failed to copy!', err);
+  });
+}
 
 window.onscroll = function() {scrollFunction()};
     
@@ -332,7 +349,7 @@ window.onload = function() {
   });
 
   // Make HTTP GET request to the second API endpoint
-  fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=ping6gwBZx1ccMMFyLgkVSupUmujYrFidEXuNRPq989', {
+  fetch('https://api.shyft.to/sol/v1/wallet/balance?network=mainnet-beta&wallet=D5SF1gEukrYeHdJzMqF4DcbtDDPMayCAUrSFEnWVf2Qu', {
       method: 'GET',
       headers: {
           'Accept': 'application/json',

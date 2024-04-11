@@ -54,78 +54,29 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
-
         <div class="row justify-content-between align-items-center">
           <div class="col-lg-4 text-center">
-            <div class="section-title">
-              <h2>El Pepe</h2>
-            </div>
-          </div>
-          <div class="col-lg-4 text-center">
-            <div class="section-title">
-              <h2>El Doge</h2>
-          </div>
-        </div>
-        
-        <div class="row justify-content-between align-items-center">
-          <div class="col-lg-4 text-center">
+            <h2>El Pepe</h2>
             <img src="assets/img/pepepng.png" class="img-fluid same-size-img" style="width: 100%;" alt="">
+            <button type="button" class="btn btn-success" onclick="copyToClipboard()" style="margin-top: 10px;">Copy Contract Address</button>
+            <div class="progress-bar">
+              <div class="progress" id="progress"></div>
+            </div>
+            <div id="balance-text">Balance: <span id="balance">Loading...</span></div>
           </div>
           <div class="col-lg-4 text-center">
             <img src="assets/img/vs.png" class="img-fluid same-size-img" style="width: 30%;" alt="">  
           </div>
           <div class="col-lg-4 text-center">
+            <h2>El Doge</h2>
             <img src="assets/img/OPT2.png" class="img-fluid same-size-img" style="width: 95%; padding: 0;" alt="">
+            <button type="button" class="btn btn-success" onclick="copyToClipboardDoge()" style="margin-top: 10px;">Copy Contract Address</button>
+            <div class="progress-barDoge">
+              <div class="progressDoge" id="progressDoge"></div>
+            </div>
+          <div id="balance-text-doge">Balance: <span id="balanceDoge">Loading...</span></div>
           </div>
         </div>
-        
-        <div class="row justify-content-between align-items-center">
-          <div class="col-lg-4 text-center">
-            <div class="section-title">
-              <button type="button" class="btn btn-success" onclick="copyToClipboard()" style="margin-top: 10px;">Copy Contract Address</button>
-              <div class="progress-bar">
-                <div class="progress" id="progress"></div>
-            </div>
-            <div id="balance-text">Balance: <span id="balance">Loading...</span></div>
-            </div>
-          </div>
-          <div class="col-lg-4 text-center">
-            <div class="section-title">
-              <button type="button" class="btn btn-success" onclick="copyToClipboard()" style="margin-top: 10px;">Copy Contract Address</button>
-              <div class="progress-barDoge">
-                <div class="progressDoge" id="progressDoge"></div>
-            </div>
-            <div id="balance-text-doge">Balance: <span id="balanceDoge">Loading...</span></div>
-          </div>
-        </div>
-
-
-
-
-
-        <!-- <div class="row justify-content-between align-items-center">
-          <div class="col-lg-4 text-center">
-            <div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 15px auto;max-width: 178px;">
-              <iframe scrolling="no" src="https://solscan.io/account/BQCm6uLUuu8C3RQtivW8wRFf3AdkdRzdD2WvDEmHvqVG" style="    border: 0px none;
-              margin-left: -6px;
-              height: 816px;
-              margin-top: -651px;
-              width: 182px;"></iframe>
-            </div>
-          </div>
-          <div class="col-lg-4 text-center">
-            <div style="border: 3px solid rgb(201, 0, 1); overflow: hidden; margin: 15px auto;max-width: 178px;">
-              <iframe scrolling="no" src="https://solscan.io/account/BQCm6uLUuu8C3RQtivW8wRFf3AdkdRzdD2WvDEmHvqVG" style="    border: 0px none;
-              margin-left: -6px;
-              height: 816px;
-              margin-top: -651px;
-              width: 182px;"></iframe>
-            </div>
-          </div>
-        </div> -->
-
-
-
       </div>
     </section><!-- End About Section -->
 
