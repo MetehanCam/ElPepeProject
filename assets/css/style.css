@@ -1268,7 +1268,7 @@ section {
 #balance-text {
   margin-top: 20px;
   font-family: Arial, sans-serif;
-  font-size: 24px;
+  font-size: 44px;
 }
 
 .progress-barDoge {
@@ -1296,7 +1296,7 @@ section {
 #balance-text-doge {
   margin-top: 20px;
   font-family: Arial, sans-serif;
-  font-size: 24px;
+  font-size: 44px;
 }
 
     /* Telefonlar için medya sorgusu */
@@ -1329,21 +1329,20 @@ section {
       
       .progress {
         height: 100%;
-        background-color: #4caf50;
+        background-color: #fed136;
         border-radius: 25px;
         position: absolute;
         top: 0;
         left: 0;
         transition: width 0.5s ease-in-out;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
+      } 
       
       #balance-text {
         margin-top: 20px;
         font-family: Arial, sans-serif;
-        font-size: 14px;
+        font-size: 17px;
       }
-      
       .progress-barDoge {
         width: 140px;
         height: 25px;
@@ -1357,7 +1356,7 @@ section {
       
       .progressDoge {
         height: 100%;
-        background-color: #4caf50;
+        background-color: #fed136;
         border-radius: 25px;
         position: absolute;
         top: 0;
@@ -1369,7 +1368,7 @@ section {
       #balance-text-doge {
         margin-top: 20px;
         font-family: Arial, sans-serif;
-        font-size: 14px;
+        font-size: 17px;
       }
       #footer .social-links a {
         font-size: 24px;
@@ -1475,6 +1474,18 @@ section {
   transition: all 1200ms;
 }
 
+
+#btnCopyBoard {
+  margin-top: 10px;
+  background-color: #fed136;
+  border-color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btnCopyBoard:hover {
+  background-color: #fbbd08; /* Adjust color on hover */
+  transform: scale(1.2); /* Scale up slightly on hover */
+}
 
 
 /* Copy-right by ARiyou2000 in May2020*/
