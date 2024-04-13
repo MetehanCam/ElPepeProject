@@ -1412,7 +1412,7 @@ section {
 }
 
 #animated-cards {
-  margin: 40px;
+  margin: 0;
 }
 
 #animated-cards .col {
@@ -1422,11 +1422,11 @@ section {
 /* Card Hover Scale & Effect */
 
 #animated-cards .card:hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
   transition: all 1200ms;
   z-index: 99;
 }
